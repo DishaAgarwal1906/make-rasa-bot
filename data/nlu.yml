@@ -1,0 +1,150 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - sure
+    - okay
+    - why not
+    - great
+    - cool
+    - pretty good
+    - fine
+    - you bet
+    - I sure did
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - none
+    - thank you
+    - no I did't
+    - could have been better
+    - great
+    - nope
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+- intent: lower_stress
+  examples: |
+    - What can I do when I am stressed?
+    - How to lower stress?
+    - What are the ways to get relaxed?
+    - What are the things which can reduce stress?
+- intent: exercise
+  examples: |
+    - what is a good amount of exercise in their thirties?
+    - How much exercise is recommended?
+    - Is walking once a day enough?
+    - how may times of gym is important?
+    - how do i do exercise
+
+- intent: inform
+  examples: |
+    - a full [8 hours] of (sleep)
+    - about [6 hours] (sleep)
+    - [medium] (stress)
+    - [high] (stress)
+    - [low] (stress)
+    - yes , I went to [run](exercise)
+    - played some [basketball] (exercise)
+
+- intent: out_of_scope
+  examples: |
+    - That's not what I want to do
+    - wait stop
+    - nope
+    - this is no help at all
+    - i want to order pizza
+    - how old are you
+    - this isn't working
+    - don't like that
+    - don't want to tell you
+    - nevermind
+    - i change my mind
+    - stop asking
+
+- intent: thankyou
+  examples: |
+    - okay
+    - great thanks
+    - thankyou
+    - thanks bye
+    - sure thanks
+
+
+

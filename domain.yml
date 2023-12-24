@@ -1,0 +1,87 @@
+version: '3.1'
+intents:
+- affirm
+- bot_challenge
+- deny
+- exercise
+- goodbye
+- greet
+- lower_stress
+- mood_great
+- mood_unhappy
+- inform
+- out_of_scope
+- utter_ask_confirm_exercise
+- utter_ask_sleep
+- utter_ask_exercise
+- thankyou
+
+slots:
+  confirm_exercise:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: exercise
+  exercise:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: exercise
+  sleep:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: sleep
+  stress:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: stress
+
+entities:
+  - exercise
+  - sleep
+  - stress
+
+responses:
+  utter_greet:
+  - text: Hi ! It's time for daily fitness check.Would you like to answer some fitness questions
+  utter_cheer_up:
+  - text: 'Here is something to cheer you up:'
+    image: https://i.imgur.com/nGF1K8f.jpg
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_lower_stress:
+  - text: Reducing stress involves adopting a combination of lifestyle changes, coping strategies, and self-care practices like Exercise Regularly
+  utter_exercise:
+  - text: At least 150 minutes of moderate-intensity aerobic exercise per week.
+  utter_ask_confirm_exercise:
+  - text: Did you exercise yesterday?
+  utter_ask_sleep:
+  - text: How much sleep did you get last night?
+  utter_ask_exercise:
+  - text: What type of exercise did you do?
+  utter_ask_continue:
+  - text: Do you wanna comtinueue?
+
+
+
+forms:
+  health_form:
+    required_slots:
+      - confirm_exercise
+      - exercise
+      - sleep
+      - stress
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+actions:
+- utter_exercise
